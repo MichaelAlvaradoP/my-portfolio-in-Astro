@@ -1,15 +1,29 @@
 ---
-import {Navigation} from './Navigation.jsx';
-import Section from './Section.astro';
-import logolinkedin from '../assets/logo-linkedin.svg';
+import { Navigation } from "./Navigation.jsx";
+import Section from "./Section.astro";
+import logolinkedin from "../assets/logo-linkedin.svg";
 ---
-<header id="home" class="w-full h-full container flex flex-col justify-center items-center min-h-screen ">
-    <Navigation client:load/>
-      <section class="container flex-row text-left justify-center items-center pl-4">
-        <h1 class="text-sky-400 pb-7 text-4xl font-bold">Michael Alvarado</h1>
-        <p class="text-sky-300 pb-7 text-xl">Desarrollador QA Trainee-Junior</p>
-        <p class="text-sky-200 pb-7 mt-4 ">desarrollador de software especializado en Control de Calidad (QA), enfocado en garantizar la calidad y la excelencia en cada proyecto en los que participa.</p>
-      </section>
-  </header>
-  
 
+<header
+  id="home"
+  class="w-full flex flex-col justify-center items-center min-h-screen mt-5 md:mt-0"
+>
+  <Navigation client:load />
+  <section
+    class="md:w-2/3 2xl:w-1/2"
+  >
+    <div class="text-center">
+      <h1 class="text-white pb-3 text-7xl pr-1 md:pr-0">Michael Alvarado</h1>
+      <p class="text-sky-500 pb-7 text-5xl md:mt-5">Desarrollador QA Trainee-Junior</p>
+      <p class="text-sky-200 pb-7 text-xl ">
+        Desarrollador de software especializado en Control de Calidad (QA),
+        enfocado en garantizar la calidad y la excelencia en cada proyecto en los
+        que participa.
+      </p>
+    </div>
+    <div class="text-center relative md:pt-10">
+      <h2 class="text-sky-500 text-4xl md:text-5xl lg:text-5xl py-5 mb-5 ">¿Interesado en mi trabajo?</h2>
+      <a class="bg-sky-600 text-white px-4 py-2 text-lg md:text-2xl rounded-md inline-block" href='#projects'>Mis proyectos</a>
+    </div>
+  </section>
+</header>
