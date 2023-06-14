@@ -3,73 +3,101 @@ import logoabout from "../assets/about.svg";
 import logoangular from "../assets/logo-angular.svg";
 import logojavascript from "../assets/logo-javascript.svg";
 import logonodejs from "../assets/logo-nodejs.svg";
+import logolinkedin from "../assets/logo-linkedin.svg";
+import logoperson from "../assets/logo-person.svg";
 ---
-<section
-  id="about"
-  class="flex flex-col gap-10 items-center min-h-screen"
->
-  <h2 class="pt-20 md:pt-32 text-7xl text-white">Sobre mi</h2>
+
+<section id="about" class="flex flex-col gap-10 items-center min-h-screen">
+  <h2 class="mt-10 md:mt-32 text-7xl text-white">Sobre mi</h2>
   <!-- Flex -->
-  <div class="flex flex-col md:flex-row md:justify-center pt-10 md:w-1/2 md:gap-5">
+  <div
+    class="flex flex-col md:flex-row md:justify-center pt-10 md:w-1/2 md:gap-5"
+  >
     <!-- ¿Quien soy -->
-    <div class="flex flex-col items-center xl:w-1/3">
-      <h3 class="text-3xl text-center text-sky-400 ">¿Quien soy?</h3>
+    <div class="flex flex-col items-center xl:w-1/3 shadow-sm">
+      <h3 class="text-3xl text-center text-sky-500">¿Quien soy?</h3>
       <!-- Img propia -->
       <div class="object-cover w-48 mt-8">
-        <img src={logoabout}  alt="Imagen Perfil">
+        <img src={logoabout} alt="Imagen Perfil" />
       </div>
       <!-- Descripcion -->
       <p class="text-xl md:text-lg text-center mt-5 text-sky-200">
-        Soy un <span class="text-sky-400">desarrollador QA junior</span> con pasión por la <span class="text-sky-400">calidad</span> y el <span class="text-sky-400">aprendizaje constante.</span> Colaboro en proyectos y siempre estoy listo para nuevos
-        desafíos.
+        Soy un <span class="text-sky-400">desarrollador QA junior</span> con pasión
+        por la <span class="text-sky-400">calidad</span> y el <span
+          class="text-sky-400">aprendizaje constante.</span
+        > Colaboro en proyectos y siempre estoy listo para nuevos desafíos.
       </p>
-      
+      <!-- CV y Linkedin-->
+      <div class="flex flex-row justify-center items-center mt-10 mb-10 md:mb-0">
+        <a
+          href="https://drive.google.com/file/d/10rNPHAbsZqHrYF_XcytzzNbnSY9jMH7D/view?usp=sharing"
+          target="_blank"
+        >
+          <img
+            src={logoperson}
+            width="70"
+            alt="Michael Alvarado's Resume"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/michael-alvarado-77265126b/"
+          target="_blank"
+          class="ml-5"
+        >
+          <img
+            src={logolinkedin}
+            width="70"
+            alt="Michael Alvarado's Linkedin"
+          />
+        </a>
+      </div>
     </div>
     <!-- Tecnologías -->
-    <div class="flex flex-col justify-center md:justify-start place-items-center gap-5 text-3xl text-center text-sky-400">
+    <div
+      class="flex flex-col justify-center md:justify-start place-items-center gap-5 text-3xl text-center text-sky-500 shadow-sm"
+    >
       <!-- Logos tecnologías -->
       Tecnologías
-      <div class="w-16 md:w-28 flex flex-row md:flex-col gap-10 justify-center pt-10">
-        <img src={logoangular} alt="Angular Logo">
-        <img src={logojavascript} alt="Javascript Logo">
-        <img src={logonodejs} alt="Node.js Logo">
-
+      <div
+        class="w-16 md:w-28 flex flex-row md:flex-col gap-10 justify-center pt-10"
+      >
+        <img src={logoangular} alt="Angular Logo" />
+        <img src={logojavascript} alt="Javascript Logo" />
+        <img src={logonodejs} alt="Node.js Logo" />
       </div>
-
     </div>
   </div>
 
-  <div class="pt-10 pb-10 text-sky-300">
+  <div class="pt-10 pb-10 text-sky-300 shadow-sm">
     <h2 class="py-10 text-sky-400 text-center text-3xl">Habilidades blandas</h2>
     <!-- Grid -->
     <div class="flex flex-col md:flex-row">
       <!-- Flex 1 -->
-     <div class="flex flex-row gap">
-       <div class="pb-10 px-10">
-         <img src="" alt="" />
-         <div class="text-center font-bold">Skill 1</div>
-         <p class="text-center">Descripción habilidad</p>
-       </div>
-       <div class="pb-10 px-10">
-         <img src="" alt="" />
-         <div class="text-center font-bold">Skill 2</div>
-         <p class="text-center">Descripción habilidad</p>
-       </div>
-
-     </div> 
-     <!-- Flex 2 -->
-     <div class="flex flex-row gap"> 
-       <div class="pb-10 px-10">
-         <img src="" alt="" />
-         <div class="text-center font-bold">Skill 3</div>
-         <p class="text-center">Descripción habilidad</p>
-       </div>
-       <div class="pb-10 px-10">
-         <img src="" alt="" />
-         <div class="text-center font-bold">Skill 4</div>
-         <p class="text-center">Descripción habilidad</p>
-       </div>
-     </div>
+      <div class="flex flex-row gap">
+        <div class="pb-10 px-10">
+          <img src="" alt="" />
+          <div class="text-center font-bold">Skill 1</div>
+          <p class="text-center">Descripción habilidad</p>
+        </div>
+        <div class="pb-10 px-10">
+          <img src="" alt="" />
+          <div class="text-center font-bold">Skill 2</div>
+          <p class="text-center">Descripción habilidad</p>
+        </div>
+      </div>
+      <!-- Flex 2 -->
+      <div class="flex flex-row gap">
+        <div class="pb-10 px-10">
+          <img src="" alt="" />
+          <div class="text-center font-bold">Skill 3</div>
+          <p class="text-center">Descripción habilidad</p>
+        </div>
+        <div class="pb-10 px-10">
+          <img src="" alt="" />
+          <div class="text-center font-bold">Skill 4</div>
+          <p class="text-center">Descripción habilidad</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
