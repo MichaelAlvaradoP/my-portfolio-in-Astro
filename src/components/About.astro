@@ -1,101 +1,105 @@
 ---
 import logoabout from "../assets/about.svg";
-import logoangular from "../assets/logo-angular.svg";
-import logojavascript from "../assets/logo-javascript.svg";
-import logonodejs from "../assets/logo-nodejs.svg";
-import logolinkedin from "../assets/logo-linkedin.svg";
-import logoperson from "../assets/logo-person.svg";
+import { Icon } from "astro-icon";
 ---
 
 <section id="about" class="flex flex-col gap-10 items-center min-h-screen">
   <h2 class="mt-10 md:mt-32 text-7xl text-white">Sobre mi</h2>
   <!-- Flex -->
   <div
-    class="flex flex-col md:flex-row md:justify-center pt-10 md:w-1/2 md:gap-5"
+    class="flex flex-col md:flex-row md:justify-center pt-10 md:w-[60%] 2xl:w-[50%] md:gap-5"
   >
     <!-- ¿Quien soy -->
-    <div class="flex flex-col items-center xl:w-1/3 shadow-sm">
-      <h3 class="text-3xl text-center text-sky-500">¿Quien soy?</h3>
+    <div class="w-full flex flex-col items-center xl:w-1/3 shadow-sm">
+      <h3 class="text-3xl text-center text-sky-400">¿Quien soy?</h3>
       <!-- Img propia -->
-      <div class="object-cover w-48 mt-8">
-        <img src={logoabout} alt="Imagen Perfil" />
+      <div class="object-cover w-48 mt-8 text-white">
+        <Icon pack="mdi" name="account-circle"/>
       </div>
       <!-- Descripcion -->
-      <p class="text-xl md:text-lg text-center mt-5 text-sky-200">
+      <p class="text-xl w-[82%] md:w-full md:text-lg text-center mt-5 text-sky-200">
         Soy un <span class="text-sky-400">desarrollador QA junior</span> con pasión
         por la <span class="text-sky-400">calidad</span> y el <span
           class="text-sky-400">aprendizaje constante.</span
         > Colaboro en proyectos y siempre estoy listo para nuevos desafíos.
       </p>
       <!-- CV y Linkedin-->
-      <div class="flex flex-row justify-center items-center mt-10 mb-10 md:mb-0">
-        <a
-          href="https://drive.google.com/file/d/10rNPHAbsZqHrYF_XcytzzNbnSY9jMH7D/view?usp=sharing"
-          target="_blank"
-        >
-          <img
-            src={logoperson}
-            width="70"
-            alt="Michael Alvarado's Resume"
-          />
+      <div
+        class="w-1/2 md:w-full flex flex-row justify-center items-center gap-x-5 mt-10 mb-10 md:mb-0 text-sky-600"
+      >
+        <a class="w-[89%] transition duration-500 hover:scale-105" href="https://drive.google.com/file/d/10rNPHAbsZqHrYF_XcytzzNbnSY9jMH7D/view?usp=sharing" target="_blank">
+          <Icon pack="mdi" name="file-account" />
         </a>
-        <a
-          href="https://www.linkedin.com/in/michael-alvarado-77265126b/"
-          target="_blank"
-          class="ml-5"
-        >
-          <img
-            src={logolinkedin}
-            width="70"
-            alt="Michael Alvarado's Linkedin"
-          />
+        <a class="w-full transition duration-500 hover:scale-105" href="https://www.linkedin.com/in/michael-alvarado-77265126b/" target="_blank">
+          <Icon name="mdi:linkedin" />
         </a>
       </div>
     </div>
     <!-- Tecnologías -->
     <div
-      class="flex flex-col justify-center md:justify-start place-items-center gap-5 text-3xl text-center text-sky-500 shadow-sm"
+      class="flex flex-col justify-center md:justify-start place-items-center gap-5 text-4xl text-center text-sky-400 shadow-sm"
     >
       <!-- Logos tecnologías -->
       Tecnologías
       <div
-        class="w-16 md:w-28 flex flex-row md:flex-col gap-10 justify-center pt-10"
+        class="w-full px-5 md:px-0 md:w-[60%] lg:w-1/2  flex flex-row md:flex-col gap-10 justify-center pt-10"
       >
-        <img src={logoangular} alt="Angular Logo" />
-        <img src={logojavascript} alt="Javascript Logo" />
-        <img src={logonodejs} alt="Node.js Logo" />
+        <Icon class="text-red-500" name="mdi:angular" />
+        <Icon class="text-sky-500" name="mdi:react" />
+        <Icon class="text-yellow-500" name="mdi:language-javascript" />
+        <Icon class="text-green-500" name="mdi:nodejs" />
       </div>
     </div>
   </div>
 
   <div class="pt-10 pb-10 text-sky-300 shadow-sm">
-    <h2 class="py-10 text-sky-400 text-center text-3xl">Habilidades blandas</h2>
-    <!-- Grid -->
-    <div class="flex flex-col md:flex-row">
+    <h2 class="py-10 text-sky-400 text-center text-4xl">Habilidades</h2>
+    <!-- Flex Completa -->
+    <div class="flex flex-col md:flex-row pt-10 text-center">
       <!-- Flex 1 -->
-      <div class="flex flex-row gap">
+      <div class="flex flex-row">
+        <!-- Skill 1 -->
         <div class="pb-10 px-10">
-          <img src="" alt="" />
-          <div class="text-center font-bold">Skill 1</div>
-          <p class="text-center">Descripción habilidad</p>
+          <div class="flex flex-row justify-center text-blue-400">
+            <Icon class="w-4/5 lg:w-[50%] xl:w-[40%]" name="mdi:chat"></Icon>
+          </div>
+          <div class="lg:text-lg font-bold text-blue-400 pb-3">Comunicación efectiva</div>
+          <div class="max-w-xs mx-auto">
+            <p class="text-sm text-blue-100">Capacidad para comunicarse efectivamente con el equipo y colaboradores internos..</p>
+          </div>
         </div>
+        <!-- Skill 2 -->
         <div class="pb-10 px-10">
-          <img src="" alt="" />
-          <div class="text-center font-bold">Skill 2</div>
-          <p class="text-center">Descripción habilidad</p>
+          <div class="flex flex-row justify-center text-yellow-400">
+            <Icon class="w-4/5 lg:w-[50%] xl:w-[40%]" name="mdi:head-lightbulb"></Icon>
+          </div>
+          <div class="lg:text-lg font-bold text-yellow-400 pb-3">Pensamiento crítico</div>
+          <div class="max-w-xs mx-auto">
+            <p class="text-sm text-yellow-100">Habilidad para evaluar resultados y detectar problemas.</p>
+          </div>
         </div>
       </div>
       <!-- Flex 2 -->
-      <div class="flex flex-row gap">
+      <div class="flex flex-row">
+        <!-- Skill 3 -->
         <div class="pb-10 px-10">
-          <img src="" alt="" />
-          <div class="text-center font-bold">Skill 3</div>
-          <p class="text-center">Descripción habilidad</p>
+          <div class="flex flex-row justify-center text-green-400">
+            <Icon class="w-4/5 lg:w-[50%] xl:w-[40%]" name="mdi:puzzle"></Icon>
+          </div>
+          <div class="lg:text-lg font-bold text-green-400 pb-3">Resolución de problemas</div>
+          <div class="max-w-xs mx-auto">
+            <p class="text-sm text-green-100">Aptitud para solucionar obstáculos de forma eficiente.</p>
+          </div>
         </div>
+        <!-- Skill 4 -->
         <div class="pb-10 px-10">
-          <img src="" alt="" />
-          <div class="text-center font-bold">Skill 4</div>
-          <p class="text-center">Descripción habilidad</p>
+          <div class="flex flex-row justify-center text-orange-400">
+            <Icon class="w-4/5 lg:w-[50%] xl:w-[40%]" name="mdi:shape"></Icon>
+          </div>
+          <div class=" lg:text-lg font-bold text-orange-400 pb-3">Adaptabilidad al cambio</div>
+          <div class="max-w-xs mx-auto">
+            <p class="text-sm text-orange-100">Flexibilidad y disposición para ajustarse a cambios de requisitos.</p>
+          </div>
         </div>
       </div>
     </div>
