@@ -27,7 +27,7 @@ export const Navigation = () => {
 
             </div>
             {/* Lista de enlaces */}
-            <ul className={`md:flex md:items-center md:pb-0 md:pt-0 pb-8 pt-2 absolute md:static bg-sky-700 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'opacity-100  top-[63px]' :'top-[-500px]'} md:opacity-100 opacity-0`}>
+            <ul className={`md:flex md:items-center md:pb-0 md:pt-0 pb-8 pt-2 absolute md:static bg-sky-700 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${open ? 'opacity-100  top-[63px]' :'top-[-500px]'} md:opacity-100 opacity-0`}>
                 {
                     Links.map((link) => (
                         <li key={link.name} className="md:ml-8 text-xl md:my-0 my-7 text-center">
