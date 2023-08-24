@@ -1,33 +1,27 @@
-<section id='projects' class="min-h-screen"
->
-  <h2 class="pt-20 md:pt-32 text-7xl text-white text-center mb-16 md:mb-28">Proyectos</h2>
-  <!-- Grid proyectos -->
-  <!-- flex flex-col md:flex-row flex-wrap -->
-  <div class=" grid grid-cols-1 md:grid-cols-3 w-full text-3xl text-center">
-    <div class="relative ">
-      <div class="bg-white text-sky-600 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in p-4 absolute top-0 left-0 w-full h-full flex items-center justify-center">
-        Descripción del elemento 1
-      </div>
-      <div class="bg-sky-800 transition-colors duration-300 ease-in p-24">
-        Proyecto 1  
-      </div>
-    </div>
-    <div class="relative ">
-      <div class="bg-white text-sky-600 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in p-4 absolute top-0 left-0 w-full h-full flex items-center justify-center">
-        Descripción del elemento 2
-      </div>
-      <div class="bg-sky-500 transition-colors duration-300 ease-in p-24">
-        Proyecto 2
-      </div>
-    </div>
-    <div class="relative ">
-      <div class="bg-white text-sky-600 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in p-4 absolute top-0 left-0 w-full h-full flex items-center justify-center">
-        Descripción del elemento 3
-      </div>
-      <div class="bg-sky-300 transition-colors duration-300 ease-in p-24">
-        Proyecto 3
-      </div>
-    </div>
-  </div>
+---
+import proyectos from './proyectos.json';
 
+type Proyecto = {
+  titulo: string;
+  descripcion: string;
+  colorFondo: string;
+  colorHover: string;
+};
+---
+<section id='projects' class="min-h-screen">
+  <h2 class="pt-20 md:pt-32 text-7xl text-white text-center mb-16 md:mb-28 gap-5">Proyectos</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 w-full text-3xl text-center gap-4">
+    <!-- Iteración a través de los proyectos -->
+    {proyectos.map((proyecto: Proyecto, index: number) => (
+      <div :key={index} class="relative">
+        <div class={`${proyecto.colorHover} transition-opacity duration-300 ease-in p-4 absolute top-0 left-0 w-full h-full flex items-center justify-center`}>
+          {proyecto.descripcion}
+        </div>
+        <div class={`${proyecto.colorFondo} transition-colors duration-300 ease-in p-24 top-0 left-0 w-full h-full flex items-center justify-center`}>
+          {proyecto.titulo}
+        </div>
+      </div>
+    ))}
+  </div>
 </section>
