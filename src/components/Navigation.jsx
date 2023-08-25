@@ -7,10 +7,10 @@ import LogoMichael from '../components/Logo.astro';
 
 export const Navigation = () => {
     let Links = [
-        { name: 'INICIO', link: '#home' },
-        { name: 'SOBRE MI', link: '#about' },
-        { name: 'PROYECTOS', link: '#projects' },
-        { name: 'CONTACTO', link: '#contact' },
+        { name: 'Inicio', link: '#home' },
+        { name: 'Sobre mi', link: '#about' },
+        { name: 'Proyectos', link: '#projects' },
+        { name: 'Contacto', link: '#contact' },
     ];
     let [open, setOpen] = React.useState(false);
     return (
@@ -18,8 +18,7 @@ export const Navigation = () => {
             {/* Nombre/logo */}
             <div className='md:flex items-center justify-between bg-sky-700 py-4 md:px-10 px-7'>
                 <div className='font-bold text-2xl cursor-pointer flex items-center gap-3  text-white duration-500 '>
-                        
-                        <img src={logotool} width="45" alt="Michael Alvarado's Logo" className="hidden lg:flex" />
+
                     Michael Alvarado
 
                 </div>
