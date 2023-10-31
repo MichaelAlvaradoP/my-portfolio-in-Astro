@@ -15,9 +15,11 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Portafolio - Michael Alvarado</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
   </head>
   <body>
     <slot />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
   </body>
 </html>
 <style is:global>
@@ -38,4 +40,12 @@ const { title } = Astro.props;
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
+  /* .grid-gallery{
+    display: grid;
+    gap:1rem;
+    grid-auto-rows: 22rem;
+    grid-column: span 2;
+    grid-template-columns: repeat(autofill, minmax(15rem, 1fr));
+
+  } */
 </style>
