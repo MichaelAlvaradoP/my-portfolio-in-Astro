@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion"
 import { Link } from "react-scroll"
-// import openicon from '../assets/logo-open-icon.svg';
+import openicon from '../assets/logo-open-icon.svg';
 // import LogoMichael from '../components/Logo.astro';
 
 
@@ -28,8 +28,8 @@ export const Navigation = () => {
 
                 </div>
                 {/* Botón desplegar menu */}
-                <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-2 cursor-pointer md:hidden '>
-                    <img name={open ? 'close' : 'menu'} src={""} width="50" alt="Open icon" />
+                <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-2 cursor-pointer md:hidden'>
+                    <img name={open ? 'close' : 'menu'} src={openicon} width="50" alt="Open icon" />
 
                 </div>
                 {/* Lista de enlaces */}

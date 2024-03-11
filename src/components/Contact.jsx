@@ -7,7 +7,7 @@ export const ContactSection = () => {
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: 0.2 }}>
+    transition={{ duration: 0.5, delay: 0.3 }}>
       <h2 className="text-center text-7xl text-white mt-32 mb-10">Contacto</h2>
       <p className="text-center text-xl text-sky-500">¿Interesado en trabajar conmigo?</p>
       <div className="my-5">
